@@ -710,6 +710,16 @@
   border: none;
 }
 
+.copy-right {
+  background-color: #101117;
+  padding: 30px 0;
+}
+
+.copy-right .item p {
+  color: #767676;
+  font-size: 13px;
+}
+
 * {
   margin: 0;
   padding: 0;
