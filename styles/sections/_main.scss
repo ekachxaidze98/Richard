@@ -492,3 +492,61 @@
         }
     }
 }
+// contact
+.contact-section {
+    background-color: #1D1D1D;
+    padding: 50px 0;
+    .items {
+        width: 100%;
+        @include flex();
+        @media only screen and (max-width: 768px) {
+            justify-content: center; 
+        }
+        .item {
+            width: 20%;
+            @media only screen and (max-width: 970px) {
+                width: 40%;
+                margin: 15px 20px;
+            }
+            @media only screen and (max-width: 768px) {
+                width: 60%;  
+            }
+            h6 {
+                font-size: 16px;
+                color: $white;
+                margin-bottom: 20px;
+            }
+            p {
+                font-size: 16px;
+                color: $white;
+            }
+            .icons {
+                i {
+                    color: $white;
+                    margin-right: 15px;
+                }
+            }
+            .register {
+                position: relative;
+                input {
+                    border-radius: 30px;
+                    padding: 20px;
+                    outline: none;
+                    border: none;
+                }
+                // button {
+                //     color: $white;
+                //     background-color: $main-green;
+                //     outline: none;
+                //     position: absolute;
+                //     transform: translate(-50%,-50%);
+                //     right: -27px;
+                //     top: 52%;
+                //     padding:  20px;
+                //     border-radius: 0 30px 30px 0;
+                //     border: none;
+                // }
+            }
+        }
+    }
+}

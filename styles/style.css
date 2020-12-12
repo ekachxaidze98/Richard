@@ -638,6 +638,78 @@
   opacity: 1;
 }
 
+.contact-section {
+  background-color: #1D1D1D;
+  padding: 50px 0;
+}
+
+.contact-section .items {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-section .items {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.contact-section .items .item {
+  width: 20%;
+}
+
+@media only screen and (max-width: 970px) {
+  .contact-section .items .item {
+    width: 40%;
+    margin: 15px 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact-section .items .item {
+    width: 60%;
+  }
+}
+
+.contact-section .items .item h6 {
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.contact-section .items .item p {
+  font-size: 16px;
+  color: #fff;
+}
+
+.contact-section .items .item .icons i {
+  color: #fff;
+  margin-right: 15px;
+}
+
+.contact-section .items .item .register {
+  position: relative;
+}
+
+.contact-section .items .item .register input {
+  border-radius: 30px;
+  padding: 20px;
+  outline: none;
+  border: none;
+}
+
 * {
   margin: 0;
   padding: 0;
