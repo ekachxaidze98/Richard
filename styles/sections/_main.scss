@@ -106,14 +106,17 @@
     .items {
         width: 100%;
         @include flex();
-
+        
         .item {
-            width: 45%;
+            width: 42%;
             margin: 15px 0;
-
+            @media only screen and (max-width: 970px) {
+                padding: 0 30px;
+            }
             @media only screen and (max-width: 768px) {
                 width: 80%;
                 justify-content: center;
+                padding: 0 30px;
             }
 
             p {
@@ -125,10 +128,8 @@
                 align-items: center;
                 margin: 40px 0;
 
-                span {
-                    font-size: 130px;
-                    color: #000;
-                    margin-right: 25px;
+                .paralax {
+                    clip-path: polygon(30% 0%, 64% 0, 52% 70%, 43% 69%, 53% 8%, 39% 8%, 38% 15%, 30% 15%);
                 }
 
                 p {
@@ -156,7 +157,8 @@
                 .color {
                     width: 50%;
                     height: .5rem;
-                    color: $main-green;
+                    border-radius: 5px;
+                    background-color: $main-green;
                 }
             }
         }
@@ -231,12 +233,16 @@
                 text-decoration: none;
                 color: $secondary-color;
                 font-size: 15px;
+                transition: color 0.35s ease-in;
+                font-weight: bold;
+                &:hover {
+                    color: $main-green;
+                }
             }
         }
 
         .items {
             width: 100%;
-
             .item:nth-child(even) {
                 background-color: #eceaea;
             }
@@ -246,15 +252,11 @@
                 @include flex();
                 align-items: unset;
                 padding: 20px 5px;
-
-                @media only screen and (max-width: 768px) {
+                @media only screen and (max-width: 970px) {
                     width: 90%;
-
                 }
-
                 .block {
                     width: 30%;
-
                     @media only screen and (max-width: 768px) {
                         width: 80%;
                         margin: 10px 0;
@@ -285,6 +287,12 @@
                     }
                 }
             }
+            @media only screen and (max-width: 970px) {
+                @include center();
+            }
+            @media only screen and (max-width: 768px) {
+                text-align: unset;
+            }
         }
     }
 
@@ -313,6 +321,11 @@
             text-decoration: none;
             color: $secondary-color;
             font-size: 15px;
+            font-weight: bold;
+            transition: color 0.35s ease-in;
+            &:hover {
+                color: $main-green;
+            }
         }
     }
 
@@ -392,6 +405,11 @@
             text-decoration: none;
             color: $secondary-color;
             font-size: 15px;
+            font-weight: bold;
+            transition: color 0.35s ease-in;
+            &:hover {
+                color: $main-green;
+            }
         }
     }
 
@@ -431,10 +449,25 @@
                 }
 
                 .img-container {
+                    position: relative;
                     .card-img-top {
                         width: 100%;
                         height: 100%;
+                        transition: opacity 0.35s ease-in;
+                        &:hover {
+                            opacity: 0.6;
+                        }
 
+                    }
+                    span {
+                        position: absolute;
+                        top: 95%;
+                        left: 14%;
+                        transform: translate(-50%,-50%);
+                        background-color: #23a592;
+                        color: #fff;
+                        font-size: .9rem;
+                        height: 20px;
                     }
                 }
 
@@ -468,7 +501,7 @@
     .items {
         width: 100%;
         @include flex();
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 970px) {
             justify-content: center; 
         }
         .item {
@@ -479,6 +512,7 @@
             }
             @media only screen and (max-width: 768px) {
                 width: 60%;  
+                @include center();
             }
             img {
                 width: 100%;
@@ -487,6 +521,10 @@
                 transition: opacity 0.5s ease-in;
                 &:hover {
                     opacity: 1;
+                }
+                @media only screen and (max-width: 768px) {
+                    width: 50%;  
+                    height: 50%;
                 }
             }
         }
@@ -524,28 +562,33 @@
                 i {
                     color: $white;
                     margin-right: 15px;
+                    cursor: pointer;
+                    transition: color 0.35s ease-in;
+                    &:hover {
+                        color: $main-green;
+                    }
                 }
             }
-            .register {
-                position: relative;
+            .register {   
+                display: flex; 
                 input {
-                    border-radius: 30px;
-                    padding: 20px;
+                    border-top-left-radius: 30px;
+                    border-bottom-left-radius: 30px;
+                    padding: 20px 15px;
                     outline: none;
                     border: none;
+                    width: 150px;
+                   
                 }
-                // button {
-                //     color: $white;
-                //     background-color: $main-green;
-                //     outline: none;
-                //     position: absolute;
-                //     transform: translate(-50%,-50%);
-                //     right: -27px;
-                //     top: 52%;
-                //     padding:  20px;
-                //     border-radius: 0 30px 30px 0;
-                //     border: none;
-                // }
+                button {
+                    color: $white;
+                    background-color: $main-green;
+                    outline: none;
+                    padding:  0 20px ;
+                    border-radius: 0 30px 30px 0;
+                    border: none;
+                    cursor: pointer;
+                }
             }
         }
     }
